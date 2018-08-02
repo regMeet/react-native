@@ -127,7 +127,7 @@ static void RCTReachabilityCallback(__unused SCNetworkReachabilityRef target, SC
   _connectionType = RCTConnectionTypeUnknown;
   _effectiveConnectionType = RCTEffectiveConnectionTypeUnknown;
   _statusDeprecated = RCTReachabilityStateUnknown;
-  _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "apple.com");
+  _reachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, _host.UTF8String ?: "google.com");
   SCNetworkReachabilityContext context = { 0, ( __bridge void *)self, NULL, NULL, NULL };
   SCNetworkReachabilitySetCallback(_reachability, RCTReachabilityCallback, &context);
   SCNetworkReachabilityScheduleWithRunLoop(_reachability, CFRunLoopGetMain(), kCFRunLoopCommonModes);
